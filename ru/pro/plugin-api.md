@@ -33,20 +33,24 @@ object RustApp_CanOpenReportUI(BasePlayer player)
 
 ## События
 
-### Табличка о вызове на проверку показана.
+### RustApp_OnCheckNoticeShowed
+Табличка о вызове на проверку показана.
 ```c#
 RustApp_OnCheckNoticeShowed(BasePlayer player)
 ```
-### Табличка о вызове на проверку скрыта.
+### RustApp_OnCheckNoticeHidden
+Табличка о вызове на проверку скрыта.
 ```c#
 RustApp_OnCheckNoticeHidden(BasePlayer player)
 ```
-### Игрок был заблокирован.
+### RustApp_OnPaidAnnounceBan
+Игрок был заблокирован.\
 `List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
 RustApp_OnPaidAnnounceBan(BasePlayer player, string steam_id, List<string> initiators)
 ```
-### Игрок был проверен, и нарушений не обнаружено.
+### RustApp_OnPaidAnnounceClean
+Игрок был проверен, и нарушений не обнаружено.\
 `List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
 RustApp_OnPaidAnnounceClean(BasePlayer player, string steam_id, List<string> initiators)
