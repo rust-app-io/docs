@@ -16,21 +16,13 @@ order: 1
     "Macros",
     "Abusive"
   ],
-  "[UI] Cooldown between reports (seconds)": 1,
+  "[UI] Cooldown between reports (seconds)": 300,
   "[UI] Auto-parse reports from F7 (ingame reports)": true,
   "[UI • Starter Plan] Show 'recently checked' checkbox (amount of days)": 7,
   "[Chat] SteamID for message avatar (default account contains RustApp logo)": "76561198134964268",
-  "[Chat] Global message format": "<size=12><color=#ffffffB3>Сообщение от Администратора</color></size>\n<color=#AAFF55>%CLIENT_TAG%</color>: %MSG%",
-  "[Chat] Direct message format": "<size=12><color=#ffffffB3>ЛС от Администратора</color></size>\n<color=#AAFF55>%CLIENT_TAG%</color>: %MSG%",
   "[Check] Command to send contact": "contact",
   // В случае если кого-то забанят через сайт, в чат будет отправлено оповещение об этом // [!code highlight]
   "[Ban] Enable broadcast server bans": true,
-  "[Ban] Ban broadcast format": "Игрок <color=#55AAFF>%TARGET%</color> <color=#bdbdbd></color>был заблокирован.\n<size=12>- причина: <color=#d3d3d3>%REASON%</color></size>",
-  "[Ban] Kick message format (%REASON% - ban reason)": "Вы забанены на этом сервере, причина: %REASON%",
-  "[Ban] Kick message format temporary (%REASON% - ban reason, %TIME% - unban date)": "Вы забанены на этом сервере до %TIME%, причина: %REASON%",
-  "[Ban] Message format when kicking due to IP": "Вам ограничен вход на сервер!",
-  "[Ban-Sync] Kick message format (%REASON% - ban reason)": "Вы навсегда забанены на этом сервере причина: %REASON%",
-  "[Ban-Sync] Kick message format temporary (%REASON% - ban reason, %TIME% - unban date)": "Вы забанены на этом сервере до %TIME% МСК, причина: %REASON%",
   // Если вас пугает выполнение команд через сайт - выключите этот параметр // [!code highlight]
   // тогда это станет абсолютно невозможно // [!code highlight]
   "[Custom Actions] Allow custom actions": true // [!code highlight]
