@@ -33,21 +33,25 @@ object RustApp_CanOpenReportUI(BasePlayer player)
 
 ## События
 
-Табличка о вызове на проверку показана.
+### Табличка о вызове на проверку показана.
 ```c#
 RustApp_OnCheckNoticeShowed(BasePlayer player)
 ```
-Табличка о вызове на проверку скрыта.
+### Табличка о вызове на проверку скрыта.
 ```c#
 RustApp_OnCheckNoticeHidden(BasePlayer player)
 ```
-`[Starter]` Игрок был заблокирован.\
+### Игрок был заблокирован.
 `List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
 RustApp_OnPaidAnnounceBan(BasePlayer player, string steam_id, List<string> initiators)
 ```
-`[Starter]` Игрок был проверен, и нарушений не обнаружено.\
+### Игрок был проверен, и нарушений не обнаружено.
 `List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
 RustApp_OnPaidAnnounceClean(BasePlayer player, string steam_id, List<string> initiators)
 ```
+
+::: warning Ограничения тарифа
+Некоторые события могут быть недоступны из-за вашего тарифного плана. Например, события **RustApp_OnPaidAnnounceBan** и **RustApp_OnPaidAnnounceClean** доступны только для тарифного плана `Starter`, на плане `Free` они не будут работать.
+:::
