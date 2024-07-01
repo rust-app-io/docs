@@ -7,22 +7,26 @@ order: 5
 ## Хуки
 
 ### RustApp_CanIgnoreCheck
-Вызывается перед отображением уведомления о проверке. Если вернуть не `null`, табличка показана не будет.
+Вызывается перед отображением уведомления о проверке.\
+Если вернуть не `null`, табличка показана не будет.
 ```csharp
 object RustApp_CanIgnoreCheck(BasePlayer player)
 ```
 ### RustApp_CanIgnoreReport
-Вызывается перед отправкой жалобы. Если вернуть не `null`, жалоба отправлена не будет.
+Вызывается перед отправкой жалобы.\
+Если вернуть не `null`, жалоба отправлена не будет.
 ```c#
 object RustApp_CanIgnoreReport(string target_steam_id, string initiator_steam_id)
 ```
 ### RustApp_CanIgnoreBan
-Вызывается перед проверкой на блокировки. Если вернуть не `null`, блокировки проверены не будут.
+Вызывается перед проверкой на блокировки.\
+Если вернуть не `null`, блокировки проверены не будут.
 ```c#
 object RustApp_CanIgnoreBan(string steam_id)
 ```
 ### RustApp_CanOpenReportUI
-Вызывается перед открытием интерфейса жалоб. Если вернуть не `null`, интерфейс открыт не будет.
+Вызывается перед открытием интерфейса жалоб.\
+Если вернуть не `null`, интерфейс открыт не будет.
 ```c#
 object RustApp_CanOpenReportUI(BasePlayer player)
 ```
