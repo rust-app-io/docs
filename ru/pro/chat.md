@@ -24,8 +24,8 @@ void RA_DirectMessageHandler(string senderId, string targetId, string message);
 
 // Пример использования:
 plugins.Find("RustApp")?.Call("RA_DirectMessageHandler", senderId, targetId, message);
-
 ```
+
 ::: tip
 Не забудьте добавить это ещё и в команду `/r`.
 :::

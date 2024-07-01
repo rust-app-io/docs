@@ -10,10 +10,10 @@ order: 4
 
 1. В конфигурации - удалите все команды для открытия UI
 ```c#
-  "[UI] Chat commands": [
-    "report", // [!code error]
-    "reports" // [!code error]
-  ],
+"[UI] Chat commands": [
+  "report", // [!code error]
+  "reports" // [!code error]
+],
 ```
 2. Перезагрузите плагин `o.reload RustApp`
 3. Определитесь, какой плагин вы хотите использовать
@@ -27,7 +27,7 @@ order: 4
 ## Для разработчиков
 
 ```c#
-  plugins.Find("RustApp")?.Call("RA_ReportSend", initiatorId, targetID, reason, <optional> message)
+plugins.Find("RustApp")?.Call("RA_ReportSend", initiatorId, targetID, reason, <optional> message)
 ```
 
 `senderId` - String SteamID64 того, кто жалуется\
