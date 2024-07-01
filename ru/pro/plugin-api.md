@@ -41,11 +41,13 @@ RustApp_OnCheckNoticeShowed(BasePlayer player)
 ```c#
 RustApp_OnCheckNoticeHidden(BasePlayer player)
 ```
-`[Starter]` Игрок был заблокирован. Третий аргумент — список игроков, которые жаловались на этого игрока.
+`[Starter]` Игрок был заблокирован.\
+`List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
 RustApp_OnPaidAnnounceBan(BasePlayer player, string steam_id, List<string> initiators)
 ```
-`[Starter]` Игрок был проверен, и нарушений не обнаружено. Третий аргумент — список игроков, которые жаловались на этого игрока.
+`[Starter]` Игрок был проверен, и нарушений не обнаружено.\
+`List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
 RustApp_OnPaidAnnounceClean(BasePlayer player, string steam_id, List<string> initiators)
 ```
