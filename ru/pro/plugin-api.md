@@ -10,50 +10,82 @@ order: 5
 Вызывается перед отображением уведомления о проверке.\
 Если вернуть не `null`, табличка показана не будет.
 ```csharp
-object RustApp_CanIgnoreCheck(BasePlayer player)
+object RustApp_CanIgnoreCheck(BasePlayer player) {
+  // Вас нельзя вызвать игрока на проверку
+  if (player.UserIDString == "%ВашSteamID64") {
+    return false;
+  }
+
+  return null;
+}
 ```
 ### RustApp_CanIgnoreReport
 Вызывается перед отправкой жалобы.\
 Если вернуть не `null`, жалоба отправлена не будет.
 ```c#
-object RustApp_CanIgnoreReport(string target_steam_id, string initiator_steam_id)
+object RustApp_CanIgnoreReport(string target_steam_id, string initiator_steam_id) {
+  // На вас никогда не будут приходить репорты
+  if (target_steam_id == "%ВашSteamID64") {
+    return false;
+  }
+
+  return null;
+}
 ```
 ### RustApp_CanIgnoreBan
 Вызывается перед проверкой на блокировки.\
 Если вернуть не `null`, блокировки проверены не будут.
 ```c#
-object RustApp_CanIgnoreBan(string steam_id)
+object RustApp_CanIgnoreBan(string steam_id) {
+  // Даже если вы заблокируете себя, вас пустит на сервер
+  if (target_steam_id == "%ВашSteamID64") {
+    return false;
+  }
+
+  return null;
+}
 ```
 ### RustApp_CanOpenReportUI
 Вызывается перед открытием интерфейса жалоб.\
 Если вернуть не `null`, интерфейс открыт не будет.
 ```c#
-object RustApp_CanOpenReportUI(BasePlayer player)
-```
+object RustApp_CanOpenReportUI(BasePlayer player) {
+  // OpenMyOwnReportSystemUI(player);
+  // Вместо нашего UI будет открыта ваша
 
-## События
+  return false;
+}
+```
 
 ### RustApp_OnCheckNoticeShowed
 Табличка о вызове на проверку показана.
 ```c#
-RustApp_OnCheckNoticeShowed(BasePlayer player)
+RustApp_OnCheckNoticeShowed(BasePlayer player) {
+  Server.Broadcast($"{player.displayName} был вызван на проверку!");
+}
 ```
 ### RustApp_OnCheckNoticeHidden
 Табличка о вызове на проверку скрыта.
 ```c#
-RustApp_OnCheckNoticeHidden(BasePlayer player)
+RustApp_OnCheckNoticeHidden(BasePlayer player) {
+  Server.Broadcast($"Проверка игрока {player.displayName} завершена!");
+}
 ```
 ### RustApp_OnPaidAnnounceBan
 Игрок был заблокирован.\
 `List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
-RustApp_OnPaidAnnounceBan(BasePlayer player, string steam_id, List<string> initiators)
+RustApp_OnPaidAnnounceBan(BasePlayer player, string steam_id, List<string> initiators) {
+  Server.Broadcast($"Игрок {player.displayName} заблокирован! На него было {initiators.Count} жалоб!");
+}
 ```
 ### RustApp_OnPaidAnnounceClean
 Игрок был проверен, и нарушений не обнаружено.\
 `List<string> initiators` — список игроков, которые жаловались на этого игрока.
 ```c#
-RustApp_OnPaidAnnounceClean(BasePlayer player, string steam_id, List<string> initiators)
+RustApp_OnPaidAnnounceClean(BasePlayer player, string steam_id, List<string> initiators) {
+  Server.Broadcast($"Игрок {player.displayName} проверен, нарушений необнаружено! На него было {initiators.Count} жалоб!");
+}
 ```
 
 ::: warning Ограничения тарифа
