@@ -15,6 +15,7 @@ plugins.Find("RustApp").Call("RA_CreateAlert", this, "Привет от 76561198
   test_payload = Performance.current.frameRate,
 }, new {
   custom_icon = "https://www.rustedit.io/images/imagelibrary/human-skull.png",
+  name = "Моё оповещение"
 });
 ```
 
