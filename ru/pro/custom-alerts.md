@@ -11,7 +11,7 @@ order: 2
 ## Пример
 
 ```c#
-plugins.Find("RustApp").Call("RA_CreateAlert", "Привет от 76561198121100397", new {
+plugins.Find("RustApp").Call("RA_CreateAlert", this, "Привет от 76561198121100397", new {
   test_payload = Performance.current.frameRate,
 }, new {
   custom_icon = "https://www.rustedit.io/images/imagelibrary/human-skull.png",
@@ -25,7 +25,7 @@ plugins.Find("RustApp").Call("RA_CreateAlert", "Привет от 76561198121100
 ## Для разработчиков
 
 ```c#
-plugins.Find("RustApp")?.Call("RA_CreateAlert", message, object? data, object? meta)
+plugins.Find("RustApp")?.Call("RA_CreateAlert", Plugin original, string message, object? data, object? meta)
 ```
 
 **`string message`** - любая произвольная строка\
@@ -36,8 +36,8 @@ plugins.Find("RustApp")?.Call("RA_CreateAlert", message, object? data, object? m
 interface CustomAlertMeta {
     // Любая ссылка с картинкой
     string custom_icon = null;
-    // Если true, не будет отображаться в таблице, а только в профиле игрока
-    bool profile_only = false;
+    // Название, для возможности фильтрации
+    string name = ""; 
     // Список SteamID игроков к которым должен быть привязан алерт. По умолчанию те, чьи ID указаны в сообщении
     List<string> custom_links = null;
 }
