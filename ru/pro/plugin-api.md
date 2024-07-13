@@ -11,7 +11,7 @@ order: 5
 Если вернуть не `null`, табличка показана не будет.
 ```csharp
 object RustApp_CanIgnoreCheck(BasePlayer player) {
-  // Вас нельзя вызвать игрока на проверку
+  // Вас нельзя вызвать на проверку
   if (player.UserIDString == "%ВашSteamID64") {
     return false;
   }
