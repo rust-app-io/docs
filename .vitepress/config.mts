@@ -87,6 +87,22 @@ export default defineConfig({
       }
     ],
 
+    
+    /*sidebar: generateSidebar([{
+      resolvePath: '/ru/',
+      scanStartPath: 'ru',
+
+      useTitleFromFileHeading: true,
+      useFolderTitleFromIndexFile: true,
+
+      includeFolderIndexFile: false,
+      includeRootIndexFile: false,
+      
+      sortMenusByFrontmatterOrder: true,
+      frontmatterOrderDefaultValue: 5
+    }]),*/
+
+
     search: { provider: 'local' },
 
     socialLinks: [
