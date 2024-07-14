@@ -4,28 +4,88 @@ import { generateSidebar } from 'vitepress-sidebar';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Rust App",
-  
   description: "Docs for RustApp",
-  locales: {
-  },
+
+  //cleanUrls: true,
+
   themeConfig: {
     i18nRouting: true,
     logo: { src: '/favicon.ico' },
-    
 
-    sidebar: generateSidebar([{
-      resolvePath: '/ru/',
-      scanStartPath: 'ru',
-
-      useTitleFromFileHeading: true,
-      useFolderTitleFromIndexFile: true,
-
-      includeFolderIndexFile: false,
-      includeRootIndexFile: false,
-      
-      sortMenusByFrontmatterOrder: true,
-      frontmatterOrderDefaultValue: 5
-    }]),
+    sidebar: [
+      {
+        text: 'Начало работы',
+        items: [
+          { 
+            text: 'Быстрый старт',
+            link: '/ru/start/getting-started'
+          },
+          { 
+            text: 'Первые шаги',
+            collapsed: true,
+            items: [
+              { 
+                text: 'Настройка плагина',
+                link: '/ru/start/first-steps/plugin-config'
+              },
+              { 
+                text: 'Настройка сайта',  
+                link: '/ru/start/first-steps/site-config'
+              },
+              { 
+                text: 'Управление сотрудниками',  
+                link: '/ru/start/first-steps/invite-stuff'
+              },
+            ]
+          },
+          { 
+            text: 'Интеграции',
+            collapsed: true,  
+            items: [
+              { 
+                text: 'Discord',
+                link: '/ru/start/integrations/discord'
+              },
+              { 
+                text: 'Rust Cheat Check',  
+                link: '/ru/start/integrations/rcc'
+              },
+            ]
+          },
+          { 
+            text: 'Собственные действия',
+            collapsed: true,
+            items: [
+              { 
+                text: 'Простые действия',
+                link: '/ru/start/actions/commands-basic'
+              },
+              { 
+                text: 'Стандартные переменные',  
+                link: '/ru/start/actions/commands-args'
+              },
+              { 
+                text: 'Собственные переменные',  
+                link: '/ru/start/actions/commands-args-own'
+              },
+              { 
+                text: 'Настройки действий',  
+                link: '/ru/start/actions/commands-settings'
+              },
+            ]
+          },
+        ]
+      },
+      {
+        text: 'Разработчикам',
+        items: [
+          { text: 'Свои оповещения', link: '/ru/dev/custom-alerts' },
+          { text: 'ЛС игроков (/pm)', link: '/ru/dev/chat' },
+          { text: 'Свой UI жалоб', link: '/ru/dev/ui' },
+          { text: 'API плагина', link: '/ru/dev/plugin-api' },
+        ]
+      }
+    ],
 
     search: { provider: 'local' },
 
