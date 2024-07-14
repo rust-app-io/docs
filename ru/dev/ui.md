@@ -15,7 +15,7 @@ order: 4
   "reports" // [!code error]
 ],
 ```
-2. Перезагрузите плагин `o.reload RustApp`
+2. Перезагрузите плагин: `o.reload RustApp`
 3. Определитесь, какой плагин вы хотите использовать
     * **IQReportSystem** - если вы [купили его официально](https://skyplugins.ru/resources/iqreportsystem.123/), он уже работает с RustApp и жалобы будут приходить на сайт
     * **Иные плагины** - вы можете связаться с разработчиком и попросить добавить поддержку плагина, либо [самостоятельно интегрировать плагин используя хуки](https://github.com/rust-app-io/plugin?tab=readme-ov-file#-integrations)  
