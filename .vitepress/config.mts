@@ -86,7 +86,6 @@ export default defineConfig({
         ]
       }
     ],
-
     
     /*sidebar: generateSidebar([{
       resolvePath: '/ru/',
