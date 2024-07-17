@@ -74,6 +74,10 @@ export default defineConfig({
               },
             ]
           },
+          { 
+            text: 'Консольные команды',
+            link: '/ru/start/commands'
+          }
         ]
       },
       {
