@@ -25,7 +25,9 @@ order: 1
   "[Ban] Enable broadcast server bans": true,
   // Если вас пугает выполнение команд через сайт - выключите этот параметр // [!code highlight]
   // тогда это станет абсолютно невозможно // [!code highlight]
-  "[Custom Actions] Allow custom actions": true // [!code highlight]
+  "[Custom Actions] Allow custom actions": true, // [!code highlight]
+  // Активирует работу кастомного хука для определения РБ
+  "[Utils] Use own raidblock hooks": false
 }
 ```
 

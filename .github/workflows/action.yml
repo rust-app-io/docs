@@ -6,7 +6,8 @@ on:
       - main
 jobs:
   Start:
-    runs-on: self-hosted
+    runs-on: 
+      labels: new
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
