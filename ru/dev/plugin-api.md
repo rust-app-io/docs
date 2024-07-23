@@ -4,6 +4,29 @@ order: 5
 
 # API плагина
 
+## Методы
+
+### RA_BanPlayer
+Блокирует игрока
+
+```csharp
+void RA_BanPlayer(string steam_id, string reason, string duration, bool global, bool ban_ip, string comment = "")
+```
+
+### RA_DirectMessageHandler
+Сохраняет сообщение игрока
+
+```csharp
+void RA_DirectMessageHandler(string from, string to, string message)
+```
+
+### RA_ReportSend
+Отправляет жалобу на игрока
+
+```csharp
+void RA_ReportSend(string initiator_steam_id, string target_steam_id, string reason, string message = "")
+```
+
 ## Хуки
 
 ### RustApp_CanIgnoreCheck
