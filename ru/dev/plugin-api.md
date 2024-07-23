@@ -29,6 +29,16 @@ void RA_ReportSend(string initiator_steam_id, string target_steam_id, string rea
 
 ## Хуки
 
+### RustApp_IsInRaid
+Вызывается каждый раз для каждого игрока, с целью получения информации об РБ.
+```c#
+object RustApp_IsInRaid(ulong userId) {
+  // TODO: Your logic to detect is user raid blocked
+
+  return false;
+}
+```
+
 ### RustApp_CanIgnoreCheck
 Вызывается перед отображением уведомления о проверке.\
 Если вернуть не `null`, табличка показана не будет.
@@ -67,6 +77,8 @@ object RustApp_CanIgnoreBan(string steam_id) {
 
   return null;
 }
+
+
 ```
 ### RustApp_CanOpenReportUI
 Вызывается перед открытием интерфейса жалоб.\

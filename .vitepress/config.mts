@@ -85,6 +85,7 @@ export default defineConfig({
         items: [
           { text: 'Свои оповещения', link: '/ru/dev/custom-alerts' },
           { text: 'ЛС игроков (/pm)', link: '/ru/dev/chat' },
+          { text: 'Поддержка рейдблока', link: '/ru/dev/raidblock' },
           { text: 'Свой UI жалоб', link: '/ru/dev/ui' },
           { text: 'API плагина', link: '/ru/dev/plugin-api' },
         ]
