@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "RustApp Documentation"
+  name: "RustApp"
   text: "Документация"
   tagline: Откройте для себя неограниченные возможности с помощью подробной документации по настройке.
   actions:

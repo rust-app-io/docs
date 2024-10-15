@@ -3,7 +3,7 @@ import { generateSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Rust App",
+  title: "RustApp Documentation",
   description: "Docs for RustApp",
 
   //cleanUrls: true,
