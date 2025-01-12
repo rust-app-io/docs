@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Открыть документацию
-      link: /ru/start/getting-started
+      link: /ru/start/commands
 
 features:
   - icon: 📚
