@@ -14,29 +14,10 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Начало работы',
         items: [
           { 
-            text: 'Быстрый старт',
-            link: '/ru/start/getting-started'
-          },
-          { 
-            text: 'Первые шаги',
-            collapsed: true,
-            items: [
-              { 
-                text: 'Настройка плагина',
-                link: '/ru/start/first-steps/plugin-config'
-              },
-              { 
-                text: 'Настройка сайта',  
-                link: '/ru/start/first-steps/site-config'
-              },
-              { 
-                text: 'Управление сотрудниками',  
-                link: '/ru/start/first-steps/invite-stuff'
-              },
-            ]
+            text: 'Консольные команды',
+            link: '/ru/start/commands'
           },
           { 
             text: 'Интеграции',
@@ -73,10 +54,6 @@ export default defineConfig({
                 link: '/ru/start/actions/commands-settings'
               },
             ]
-          },
-          { 
-            text: 'Консольные команды',
-            link: '/ru/start/commands'
           }
         ]
       },

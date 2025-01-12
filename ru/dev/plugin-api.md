@@ -122,9 +122,3 @@ void RustApp_OnPaidAnnounceClean(BasePlayer player, string steam_id, List<string
   Server.Broadcast($"Игрок {player.displayName} проверен, нарушений необнаружено! На него было {initiators.Count} жалоб!");
 }
 ```
-
-<br>
-
-::: warning Ограничения тарифа
-Некоторые события могут быть недоступны из-за вашего тарифного плана. Например, события **RustApp_OnPaidAnnounceBan** и **RustApp_OnPaidAnnounceClean** доступны только для тарифного плана `Starter`, на плане `Free` они не будут работать.
-:::
