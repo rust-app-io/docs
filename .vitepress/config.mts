@@ -1,12 +1,9 @@
 import { defineConfig } from 'vitepress'
-import { generateSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "RustApp Documentation",
   description: "Docs for RustApp",
-
-  //cleanUrls: true,
 
   themeConfig: {
     i18nRouting: true,
@@ -62,27 +59,11 @@ export default defineConfig({
         items: [
           { text: 'Свои оповещения', link: '/ru/dev/custom-alerts' },
           { text: 'ЛС игроков (/pm)', link: '/ru/dev/chat' },
-          { text: 'Поддержка рейдблока', link: '/ru/dev/raidblock' },
           { text: 'Свой UI жалоб', link: '/ru/dev/ui' },
           { text: 'API плагина', link: '/ru/dev/plugin-api' },
         ]
       }
     ],
-    
-    /*sidebar: generateSidebar([{
-      resolvePath: '/ru/',
-      scanStartPath: 'ru',
-
-      useTitleFromFileHeading: true,
-      useFolderTitleFromIndexFile: true,
-
-      includeFolderIndexFile: false,
-      includeRootIndexFile: false,
-      
-      sortMenusByFrontmatterOrder: true,
-      frontmatterOrderDefaultValue: 5
-    }]),*/
-
 
     search: { provider: 'local' },
 
